@@ -15,9 +15,9 @@
 					"script": {
 						"type": "text/javascript",
 						"exec": [
-							"tests[\"Status code is 200\"] = responseCode.code === 200;",
-							"",
-							"tests[\"Body is correct\"] = responseBody === \"response_body_string\";"
+							"pm.test('response code is 200', function () {\r",
+							"  pm.response.to.be.ok;\r",
+							"});"
 						]
 					}
 				}
@@ -39,9 +39,9 @@
 					"script": {
 						"type": "text/javascript",
 						"exec": [
-							"tests[\"Status code is 200\"] = responseCode.code === 200;",
-							"",
-							"tests[\"Response time is less than 1000ms\"] = responseTime < 1000;"
+							"pm.test('response code is 200', function () {",
+							"  pm.response.to.be.ok;",
+							"});"
 						]
 					}
 				}
