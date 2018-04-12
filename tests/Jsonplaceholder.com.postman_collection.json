@@ -1,0 +1,59 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Jsonplaceholder.com",
+		"_postman_id": "f69450a3-e11d-ac77-6c7c-ea3cecbc2a95",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://jsonplaceholder.typicode.com/posts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Body is correct\"] = responseBody === \"response_body_string\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://jsonplaceholder.typicode.com/posts",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "https://jsonplaceholder.typicode.com/posts/1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"Response time is less than 1000ms\"] = responseTime < 1000;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://jsonplaceholder.typicode.com/posts/1",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
