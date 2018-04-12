@@ -6,7 +6,7 @@
     "test": "tests"
   },
   "scripts": {
-    "api-tests-production": "newman run /tests/Jsonplaceholder.com.postman_collection.json"
+    "api-tests-production": "newman run C:\Program Files (x86)\Jenkins\workspace\jsonplaceholder_api_tests\tests\Jsonplaceholder.com.postman_collection.json"
   },
   "author": "Angel Absé",
   "dependencies": {
